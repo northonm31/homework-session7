@@ -39,12 +39,13 @@ let users = [
     User(email: "adam_corcoran@me.com", password: "password01"),
     User(email: "acorcoran@redcross.org.au", password: "password02"),
     User(email: "adzcorcoran@gmail.com", password: "password03"),
+    User(email: "incorrectemail.com", password: "badone"),
 ]
 
-//HELP! Can't figure out how to iterate all items in the array through the below validation. Best I could get to was essentially: "If the email address of the first item is valid, report back on all emails. If the password of the first item is valid, report back on all passwords."
+//Fixed the array iteration with Ryan's help.
 
-for email in users {
-if users[0].email =~ "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}" {
+for user in users {
+if user.email =~ "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}" {
     println("You have entered a valid email address.")
 }
 
@@ -53,8 +54,8 @@ else {
 }
 }
 
-for password in users {
-if users[0].password =~ "\\w{8}" {
+for user in users {
+if user.password =~ "\\w{8}" {
     println("Your password matches our security settings.")
 }
 
