@@ -35,12 +35,30 @@ func =~ (input: String, pattern: String) -> Bool {
 
 //START custom code by Adam
 
-let users = [
-    User(email: "adam_corcoran@me.com", password: "password01"),
-    User(email: "acorcoran@redcross.org.au", password: "password02"),
-    User(email: "adzcorcoran@gmail.com", password: "password03"),
-    User(email: "incorrectemail.com", password: "badone"),
-]
+//let users = [
+//    User(email: "adam_corcoran@me.com", password: "password01"),
+//    User(email: "acorcoran@redcross.org.au", password: "password02"),
+//    User(email: "adzcorcoran@gmail.com", password: "password03"),
+//    User(email: "incorrectemail.com", password: "badone"),
+//]
+
+var users = [User]()
+
+users.append(
+    User(email: "adam_corcoran@me.com", password: "password01")
+    )
+
+users.append(
+    User(email: "acorcoran@redcross.org.au", password: "password02")
+)
+
+users.append(
+    User(email: "adzcorcoran@gmail.com", password: "password03")
+)
+
+users.append(
+    User(email: "incorrectemail.com", password: "badone")
+)
 
 //Fixed the array iteration with Ryan's help.
 
